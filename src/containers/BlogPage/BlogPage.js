@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { Component } from 'react';
 import './BlogPage.css';
-import { AddPostForm } from './components/AddPostForm';
-import { BlogCard } from './components/BlogCard';
+import { AddPostForm } from './AddPostForm';
+import { BlogCard } from './BlogCard';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { EditPostForm } from './components/EditPostForm';
-import { postsUrl } from '../../shared/projectData';
+import { EditPostForm } from './EditPostForm';
+import { postsUrl } from '../../constants/projectData';
 
 let source;
 
