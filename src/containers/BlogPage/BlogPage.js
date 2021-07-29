@@ -10,13 +10,17 @@ import { postsUrl } from '../../constants/projectData';
 let source;
 
 export class BlogPage extends Component {
-  state = {
-    showAddForm: false,
-    showEditForm: false,
-    blogArr: [],
-    isPending: false,
-    selectedPost: {},
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAddForm: false,
+      showEditForm: false,
+      blogArr: [],
+      isPending: false,
+      selectedPost: {},
+    };
+  }
 
   fetchPosts = () => {
     source = axios.CancelToken.source();
@@ -147,6 +151,7 @@ export class BlogPage extends Component {
           deletePost={() => this.deletePost(item)}
           handleEditFormShow={this.handleEditFormShow}
           handleSelectPost={() => this.handleSelectPost(item)}
+          isLoggedIn={this.props.isLoggedIn}
         />
       );
     });
@@ -175,11 +180,13 @@ export class BlogPage extends Component {
 
         <>
           <h1>Ami's Blog</h1>
-          <div className="addNewPost">
-            <button className="blackBtn" onClick={this.handleAddFormShow}>
-              Create new post
-            </button>
-          </div>
+          {this.props.isLoggedIn && (
+            <div className="addNewPost">
+              <button className="blackBtn" onClick={this.handleAddFormShow}>
+                Create new post
+              </button>
+            </div>
+          )}
 
           <div className="posts" style={{ opacity: postsOpactiy }}>
             {blogPosts}

@@ -12,6 +12,7 @@ export const BlogCard = ({
   deletePost,
   handleEditFormShow,
   handleSelectPost,
+  isLoggedIn,
 }) => {
   const showEditForm = () => {
     handleSelectPost();
@@ -31,14 +32,16 @@ export const BlogCard = ({
           </button>
         </div>
       </div>
-      <div className="postControl">
-        <button className="editBtn" onClick={showEditForm}>
-          <EditIcon />
-        </button>
-        <button className="deleteBtn" onClick={deletePost}>
-          <DeleteForeverIcon />
-        </button>
-      </div>
+      {isLoggedIn && (
+        <div className="postControl">
+          <button className="editBtn" onClick={showEditForm}>
+            <EditIcon />
+          </button>
+          <button className="deleteBtn" onClick={deletePost}>
+            <DeleteForeverIcon />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

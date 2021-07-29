@@ -14,13 +14,18 @@ export const Header = ({ isLoggedIn, setIsLoggedIn, userName }) => {
       {isLoggedIn ? (
         <nav>
           Welcome, &nbsp;<strong>{userName}</strong>
-          <NavLink onClick={handleLogOut} exact to="/login">
+          <NavLink onClick={handleLogOut} exact to="/">
             <MeetingRoomIcon />
             Log Out
           </NavLink>
         </nav>
       ) : (
-        'Welcome, stranger!'
+        <nav>
+          'Welcome, stranger!'
+          <NavLink exact to="/login">
+            Login
+          </NavLink>
+        </nav>
       )}
     </header>
   );

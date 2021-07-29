@@ -11,7 +11,7 @@ export default function App() {
     localStorage.getItem('isLoggedIn') === 'true'
   );
   const [userName, setUserName] = useState(localStorage.getItem('userName'));
-
+ 
   return (
     <Router>
       <div className="App">
@@ -23,7 +23,12 @@ export default function App() {
 
         <main>
           <Switch>
-            <Route exact path="/" component={BlogPage} />
+            <Route exact path="/" render={(props) => (
+              <BlogPage
+                {...props}
+                isLoggedIn={isLoggedIn}
+              />
+            )} />
             <Route
               exact
               path="/login"
