@@ -2,6 +2,7 @@ import './BlogCard.css';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
+import PropsTypes from 'prop-types';
 
 export const BlogCard = ({
   title,
@@ -40,4 +41,14 @@ export const BlogCard = ({
       </div>
     </div>
   );
+};
+
+BlogCard.propTypes = {
+  title: PropsTypes.string,
+  description: PropsTypes.string,
+  liked: PropsTypes.bool,
+  likePost: PropsTypes.func,
+  deletePost: PropsTypes.func,
+  handleEditFormShow: PropsTypes.func,
+  handleSelectPost: PropsTypes.func,
 };

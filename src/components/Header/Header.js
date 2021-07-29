@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import PropsTypes from 'prop-types';
 
 export const Header = ({ isLoggedIn, setIsLoggedIn, userName }) => {
   const handleLogOut = () => {
@@ -23,4 +24,10 @@ export const Header = ({ isLoggedIn, setIsLoggedIn, userName }) => {
       )}
     </header>
   );
+};
+
+Header.propTypes = {
+  sLoggedIn: PropsTypes.func,
+  setIsLoggedIn: PropsTypes.func,
+  userName: PropsTypes.string,
 };

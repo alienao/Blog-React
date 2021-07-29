@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './LoginPage.css';
+import PropsTypes from 'prop-types';
 
 export const LoginPage = ({ setIsLoggedIn, history, setUserName }) => {
   const [login, setLogin] = useState('');
@@ -54,4 +55,10 @@ export const LoginPage = ({ setIsLoggedIn, history, setUserName }) => {
       </form>
     </h1>
   );
+};
+
+LoginPage.propTypes = {
+  setIsLoggedIn: PropsTypes.func,
+  history: PropsTypes.object,
+  setUserName: PropsTypes.func,
 };
