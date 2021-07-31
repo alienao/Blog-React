@@ -19,7 +19,7 @@ export const BlogCard = ({
     handleEditFormShow();
   };
 
-  const heartFill = liked ? 'crimson' : 'black';
+  const heartFill = liked ? 'crimson' : 'darkslategrey';
 
   return (
     <div className="post">

@@ -8,20 +8,20 @@ export class EditPostForm extends Component {
     postDesc: this.props.selectedPost.description,
   };
 
-  handlePostTitleChange = (e) => {
+  handlePostTitleChange = (event) => {
     this.setState({
-      postTitle: e.target.value,
+      postTitle: event.target.value,
     });
   };
 
-  handlePostDescChange = (e) => {
+  handlePostDescChange = (event) => {
     this.setState({
-      postDesc: e.target.value,
+      postDesc: event.target.value,
     });
   };
 
-  savePost = (e) => {
-    e.preventDefault();
+  savePost = (event) => {
+    event.preventDefault();
     const post = {
       id: this.props.selectedPost.id,
       title: this.state.postTitle,
@@ -33,8 +33,8 @@ export class EditPostForm extends Component {
     this.props.handleEditFormHide();
   };
 
-  handleEscape = (e) => {
-    if (e.key === 'Escape') {
+  handleEscape = (event) => {
+    if (event.key === 'Escape') {
       this.props.handleEditFormHide();
     }
   };
@@ -79,7 +79,7 @@ export class EditPostForm extends Component {
             />
           </div>
           <div>
-            <button className="blackBtn" type="submit">
+            <button className="greyBtn" type="submit">
               Save
             </button>
           </div>

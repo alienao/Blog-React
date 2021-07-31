@@ -8,20 +8,20 @@ export class AddPostForm extends Component {
     postDesc: '',
   };
 
-  handlePostTitleChange = (e) => {
+  handlePostTitleChange = (event) => {
     this.setState({
-      postTitle: e.target.value,
+      postTitle: event.target.value,
     });
   };
 
-  handlePostDescChange = (e) => {
+  handlePostDescChange = (event) => {
     this.setState({
-      postDesc: e.target.value,
+      postDesc: event.target.value,
     });
   };
 
-  createPost = (e) => {
-    e.preventDefault();
+  createPost = (event) => {
+    event.preventDefault();
     const post = {
       title: this.state.postTitle,
       description: this.state.postDesc,
@@ -32,8 +32,8 @@ export class AddPostForm extends Component {
     this.props.handleAddFormHide();
   };
 
-  handleEscape = (e) => {
-    if (e.key === 'Escape') {
+  handleEscape = (event) => {
+    if (event.key === 'Escape') {
       this.props.handleAddFormHide();
     }
   };
@@ -78,7 +78,7 @@ export class AddPostForm extends Component {
             />
           </div>
           <div>
-            <button className="blackBtn" type="submit">
+            <button className="greyBtn" type="submit">
               Add Post
             </button>
           </div>

@@ -182,7 +182,7 @@ export class BlogPage extends Component {
           <h1>Ami's Blog</h1>
           {this.props.isLoggedIn && (
             <div className="addNewPost">
-              <button className="blackBtn" onClick={this.handleAddFormShow}>
+              <button className="greyBtn" onClick={this.handleAddFormShow}>
                 Create new post
               </button>
             </div>

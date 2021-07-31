@@ -6,16 +6,16 @@ export const LoginPage = ({ setIsLoggedIn, history, setUserName }) => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLoginChange = (e) => {
-    setLogin(e.target.value);
+  const handleLoginChange = (event) => {
+    setLogin(event.target.value);
   };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
   };
 
-  const handleLogIn = (e) => {
-    e.preventDefault();
+  const handleLogIn = (event) => {
+    event.preventDefault();
 
     localStorage.setItem('isLoggedIn', true);
     localStorage.setItem('userName', login);
@@ -33,7 +33,7 @@ export const LoginPage = ({ setIsLoggedIn, history, setUserName }) => {
           <input
             className="loginFormInput"
             type="text"
-            placeholder="Log In"
+            placeholder="Name..."
             onChange={handleLoginChange}
             required
           />
@@ -48,7 +48,7 @@ export const LoginPage = ({ setIsLoggedIn, history, setUserName }) => {
           />
         </div>
         <div>
-          <button className="blackBtn" type="submit">
+          <button className="greyBtn" type="submit">
             Log In
           </button>
         </div>

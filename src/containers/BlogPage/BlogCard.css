@@ -15,4 +15,8 @@
 
 .deleteBtn svg {
   font-size: 32px;
+  color: darkslategrey;
+}
+.editBtn {
+  color: darkslategrey;
 }

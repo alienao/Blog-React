@@ -4,11 +4,9 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-
   background-color: white;
   width: 300px;
   padding: 20px;
-
   text-align: center;
   border-radius: 10px;
 }
@@ -31,7 +29,7 @@
 
 .addFormInput {
   width: 100%;
-  padding: 4px 5px;
+  padding: 5px 5px;
   border-radius: 8px;
   border: 1px solid rgb(138, 136, 136);
 }

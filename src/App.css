@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
+  background-image: linear-gradient(to right, white, rgb(103, 130, 148));
+  color: darkslategrey;
 }
 
 a {
@@ -30,7 +32,7 @@ input,
 button,
 textarea {
   font-family: 'Nunito', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 main {
@@ -42,14 +44,14 @@ h1 {
   text-align: center;
 }
 
-.blackBtn {
+.greyBtn {
   padding: 5px 15px;
   border-radius: 16px;
-  background-color: black;
+  background-color: darkslategrey;
   color: white;
   transition: 0.2s;
 }
 
-.blackBtn:hover {
-  background-color: rgba(1, 1, 1, 0.8);
+.greyBtn:hover {
+  background-color: orange;
 }
