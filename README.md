@@ -19,6 +19,6 @@
 
 ### I was created fake server to save there data.
 
-### App deployed in Vercel.
+### App deployed in Vercel and Netlify.
 
 ### There is a like icon, when you click it will like the post.
